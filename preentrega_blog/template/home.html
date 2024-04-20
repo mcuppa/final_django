@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+    
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Perfil de Usuario</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <!-- Contenedor del avatar -->
+                                <div class="avatar-container">
+                                    <img src="usuario.jpg" alt="Foto de perfil" class="img-fluid rounded-circle avatar">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h5>Nombre de Usuario</h5>
+                                <p>Correo Electrónico: usuario@example.com</p>
+                                <p>Fecha de Nacimiento: 01/01/1990</p>
+                                <p>País: País de Residencia</p>
+                                <!-- Agregar más información del usuario aquí -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <!-- Botones de acción (editar perfil, cambiar contraseña, etc.) -->
+                        <a class="btn btn-primary mr-2" href="{% url 'profile_edit' %}" >Editar Perfil</a>
+                        <button class="btn btn-danger">Cerrar Sesión</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

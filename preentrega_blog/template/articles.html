@@ -1,0 +1,54 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+
+    <div class="container">
+        <h1 class="text-center my-4">Artículos del Blog</h1>
+        <div class="row">
+            {% for elemento in articulos %}
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img src="{{elemento.image}}" class="card-img-top img-fluid" alt="..." style="max-height: 380px;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{elemento.titulo}}</h5>
+                            <p class="card-text">{{ elemento.content|truncatechars:100 }}</p>
+                            <a href="#" class="btn btn-primary leer-mas" data-toggle="modal"
+                                data-target="#modalArticulo{{elemento.id}}" data-imagen="{{ elemento.image }}">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal para el artículo completo -->
+                <div class="modal fade" id="modalArticulo{{elemento.id}}" tabindex="-1" role="dialog"
+                    aria-labelledby="modalArticuloLabel{{elemento.id}}" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 800px;">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalArticuloLabel{{elemento.id}}">{{elemento.titulo}}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <!-- Agregamos la clase text-center para centrar verticalmente el contenido -->
+                                <img src="{{ elemento.image }}" class="img-fluid mx-auto mb-3" alt="Imagen del artículo"
+                                    style="max-height: 300px;">
+                                <p>{{ elemento.content }}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+            <!-- Puedes agregar más columnas según sea necesario -->
+        </div>
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block navbar %}
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'login' %}">Log in</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'signup' %}">Sign up</a>
+  </li>
+{% endblock %}
+{% block content %}
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-8">
+      <h2 class="display-3 py-5">¡Bienvenido a mi blog!</h2>
+      <img src="static/preentrega_blog/assets/consolasRetro.jpg" class="img-fluid mx-auto d-block"
+        alt="Imagen de bienvenida">
+      <p>
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rhoncus leo vitae laoreet luctus. Ut lobortis
+        turpis non dignissim tristique. Quisque pharetra et massa sed congue. Maecenas aliquam est neque, et imperdiet
+        tortor suscipit ac. Curabitur lorem ex, imperdiet non quam ac, tristique auctor velit. Class aptent taciti
+        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec bibendum elit nec metus bibendum
+        lacinia. Proin non quam a sapien condimentum interdum.
+
+        Vestibulum viverra ex non dolor ullamcorper, vitae euismod turpis porttitor. Fusce rhoncus bibendum quam,
+        accumsan bibendum ipsum sagittis sed. Sed ornare elit orci, quis pretium felis suscipit nec. Nam egestas ac nibh
+        at hendrerit. Ut purus justo, fermentum eget luctus non, aliquet quis sem. Nunc interdum imperdiet ipsum iaculis
+        dictum. In id vulputate mi. Nunc faucibus eros at tellus volutpat laoreet. Fusce lobortis, urna quis faucibus
+        tincidunt, nulla nisi interdum ante, lobortis fermentum erat mi pellentesque lorem. Praesent euismod et eros
+        quis posuere. Suspendisse laoreet pulvinar ex eget interdum. Nunc enim lacus, tincidunt feugiat aliquet at,
+        sodales eget arcu. Nullam scelerisque vel urna ac mattis. Vivamus id luctus leo. Maecenas orci metus, tincidunt
+        a lobortis a, semper ut est. Quisque a faucibus purus.
+
+        Proin gravida turpis nec tristique porta. Morbi at ipsum est. Aliquam nec condimentum quam. Vestibulum
+        condimentum, turpis vel luctus dignissim, dui felis vestibulum dui, non ultricies quam diam id erat. Proin
+        dapibus dolor risus, sit amet vulputate erat placerat at. Maecenas libero orci, congue euismod congue viverra,
+        lobortis in sem. Nullam vitae odio eget turpis iaculis suscipit quis bibendum tortor.
+
+        Nullam eu arcu vitae orci gravida dignissim a vel tellus. Donec non porta lectus. Quisque feugiat felis et
+        tellus luctus dictum. Pellentesque felis magna, pulvinar nec magna eu, molestie facilisis ipsum. Sed lobortis
+        pharetra leo, sed pharetra ipsum rhoncus ac. Nunc fermentum magna ac felis auctor scelerisque. Aliquam facilisis
+        arcu ante, id venenatis magna maximus elementum. Vivamus tempor, diam et viverra euismod, nisi dui bibendum
+        orci, vel eleifend odio ipsum id dolor. Aliquam interdum ligula eu purus venenatis ullamcorper.
+
+        Suspendisse malesuada tellus ac tortor tincidunt, auctor sagittis turpis semper. Aenean ante arcu, sagittis nec
+        tincidunt id, dignissim sed nulla. Duis tincidunt quis dui a cursus. Curabitur lacus risus, pellentesque ac
+        nulla a, tincidunt feugiat magna. Vivamus tincidunt ante in viverra placerat. Mauris bibendum eget nulla at
+        tristique. Pellentesque sit amet lacus quis purus finibus varius.</p>
+      <!-- Agrega aquí tus entradas de blog -->
+    </div>
+    <div class="col-md-4">
+      <!-- Barra lateral -->
+      <h2 class="display-3 py-5">Barra lateral</h2>
+      <p>Contenido de la barra lateral.</p>
+      <h3 class="display-6 py-1">Articulo 1 </h3>
+      <p class="py-2">Descripcion del articulo</p>
+      <h3 class="display-6 pt-5">Articulo 2 </h3>
+      <p class="py-2">Descripcion del articulo</p>
+      <h3 class="display-6 pt-5">Articulo 3</h3>
+      <p class="py-2">Descripcion del articulo</p>
+      <h3 class="display-6 pt-5">Articulo 4</h3>
+      <p class="py-2">Descripcion del articulo</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

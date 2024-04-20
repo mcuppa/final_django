@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-4"></div> <!-- Columna vacía para dividir en 3 -->
+            <div class="col-lg-4">
+                <h2 class="display-3">Inicia sesion</h2> <!-- Columna del formulario -->
+                    <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="" class="form-label">Usuario</label>
+                        <input type="user" name="username" class="form-control">
+                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                        <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                   
+                    <p class="py-1">¿No tenes una cuenta? <a href="{% url 'signup'%}">Registrate acá</a></p>
+                    <button type="submit"  class="btn btn-primary btn-block">Submit</button>
+                    <button type="reset" class="btn btn-primary">Resetear</button>
+                </form>
+                {% if error %}
+                    {{ error }}
+                {% endif %}
+            </div>
+            <div class="col-lg-4"></div> <!-- Columna vacía para dividir en 3 -->
+        </div>
+    </div>
+
+
+
+{% endblock %}
